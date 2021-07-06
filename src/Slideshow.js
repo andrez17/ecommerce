@@ -27,11 +27,14 @@ export const Slideshow = (props) => {
     return (
         <div className="slideshow">
             <button class="w3-button w3-display-left" onClick={() => plusDivs(-1)}>&#10094;</button>
-                {props.products.map((product, index) => {
+                <div className="mySlidesContainer">
+                    {props.products.map((product, index) => {
                     if (index < 5)
-                    return <Image key={index} id={index} image={product.image} showDivs={showDivs}/>
-                })
-                }
+                    return <Image key={index} id={index} image={product.image}/>
+                    })
+                    }
+                </div>
+                
             <button class="w3-button w3-display-right" onClick={() => plusDivs(1)}>&#10095;</button>
         </div>
     )

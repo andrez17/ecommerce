@@ -9,6 +9,17 @@
   background-color: rgb(202, 202, 202);
   text-align: center;
   grid-column: 1 / span 5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.navbar-links li{
+  /* background-color: aquamarine; */
+  width: 300px;
+  display: inline;
+  margin: 10px;
 }
 
 .site-container {
@@ -31,8 +42,14 @@
 
 .mySlides {
   height: 500px;
+  margin: 0 auto;
   display: block;
 }
+
+.mySlidesContainer {
+  width: 60%;
+}
+
 
 .footer-container {
   background-color: rgb(202, 202, 202);
