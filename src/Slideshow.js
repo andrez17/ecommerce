@@ -1,10 +1,8 @@
-import React from 'react'
+import {Image} from "./Image"
 
 export const Slideshow = (props) => {
 
     var slideIndex = 1;
-    let isLoading = true;
-    
 
     const plusDivs = (n) => {
         showDivs(slideIndex += n);
@@ -12,30 +10,28 @@ export const Slideshow = (props) => {
 
     const showDivs = (n) => {
         var i;
-        var x = document.getElementsByClassName("mySlides");
+        let x = document.getElementsByClassName('mySlides');
         if (n > x.length) {slideIndex = 1}
         if (n < 1) {slideIndex = x.length} ;
         for (i = 0; i < x.length; i++) {
             x[i].style.display = "none";
         }
+        // if(x[slideIndex-1] === undefined){
+        //     console.log('No')
+        // }
         x[slideIndex-1].style.display = "block";
     }
 
-    const createImages = () => {
-        return props.products.map(async(product, index) => { 
-            if(index < 5)
-            var img = document.createElement('img');
-            img.src = product.image;
-            document.getElementsByClassName("mySlides")[0].appendChild(img);
-        })  
-    }
-
-    createImages();
+    setTimeout(()=>showDivs(slideIndex), 750)
 
     return (
-        <div>
+        <div className="slideshow">
             <button class="w3-button w3-display-left" onClick={() => plusDivs(-1)}>&#10094;</button>
-                <div className="mySlides"></div>
+                {props.products.map((product, index) => {
+                    if (index < 5)
+                    return <Image key={index} id={index} image={product.image} showDivs={showDivs}/>
+                })
+                }
             <button class="w3-button w3-display-right" onClick={() => plusDivs(1)}>&#10095;</button>
         </div>
     )

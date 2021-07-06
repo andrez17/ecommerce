@@ -10,7 +10,6 @@ export const Site = () => {
             const response = await fetch('https://fakestoreapi.com/products/');
             const data = await response.json();
             setProducts(data);
-            // console.log(data);
         }
         fetchData();
     }, [])
@@ -19,7 +18,7 @@ export const Site = () => {
 
     return (
         <div className="site-container">
-            <Slideshow products={products}/> 
+               {<Slideshow products={products}/>} 
         </div>
     )
 }
