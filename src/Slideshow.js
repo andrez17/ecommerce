@@ -33,6 +33,9 @@ export const Slideshow = (props) => {
                     return <Image key={index} id={index} image={product.image}/>
                     })
                     }
+                    <div className="mySlidesBanner">
+                        <h1>Everything you need. In one place.</h1>
+                    </div>
                 </div>
                 
             <button class="w3-button w3-display-right" onClick={() => plusDivs(1)}>&#10095;</button>
