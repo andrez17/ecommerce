@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Slideshow } from './Slideshow'
+import { ProductRow } from './ProductRow'
 
 
 export const Site = () => {
@@ -18,7 +19,8 @@ export const Site = () => {
 
     return (
         <div className="site-container">
-               {<Slideshow products={products}/>} 
+               <Slideshow products={products}/>
+               <ProductRow />
         </div>
     )
 }
