@@ -9,7 +9,7 @@
   /* height: 100vh; */
 
 
-  grid-template: 5% 100% 20%/ repeat(5, 1fr);
+  grid-template: 5% 90% 20%/ repeat(5, 1fr);
   grid-gap: 50px 0px;
 }
 
@@ -37,7 +37,8 @@
   grid-row: 2 / span 1;
   grid-column: 1 / span 5;
   display: grid;
-  grid-template: 500px 200px 500px 500px / auto;
+  grid-template: 500px 200px 500px 700px / auto;
+  grid-gap: 50px;
   /* grid-gap: 50px; */
   /* justify-content: center;
   align-content: center;
@@ -151,6 +152,14 @@
   margin: 10px;
 }
 
+.fashionreel-container{
+  /* background-color: red; */
+  grid-row: 4 / span 1;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+
+}
+
 .footer-container {
   background-color: rgb(202, 202, 202);
   text-align: center;
@@ -158,6 +167,42 @@
   grid-column: 1 / span 5;
   display: grid;
   grid-template-rows: 1fr 2fr
+}
+
+.fashionreel-header {
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 1 / span 1;
+}
+
+.fashionreel-section {
+  grid-row: 2 / span 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: blueviolet; */
+}
+
+.reel-1 {
+  height: 500px;
+  width: 280px;
+  background: url("https://www.fashiongonerogue.com/wp-content/uploads/2014/04/iggy-azalea-revolve-clothing-photos-2014-1.jpg") fixed center no-repeat;
+  background-size: contain;
+}
+
+.reel-2 {
+  height: 500px;
+  width: 280px;
+  background: url("https://sc01.alicdn.com/kf/HT1HmUNFAliXXagOFbX6/220128135/HT1HmUNFAliXXagOFbX6.jpg") fixed center no-repeat;
+  
+}
+
+.reel-3 {
+  height: 500px;
+  width: 280px;
+  background: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gh-closet-organization-1583437747.png") fixed center no-repeat;
 }
 
 

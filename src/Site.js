@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { Slideshow } from './Slideshow'
 import { ProductRow } from './ProductRow'
 import { Shipping } from './Shipping'
+import { FashionReel } from './FashionReel'
 
 
 export const Site = () => {
@@ -25,6 +26,7 @@ export const Site = () => {
                 <Slideshow products={products}/>
                 <ProductRow />
                 <Shipping />
+                <FashionReel />
             </div>
         </Router>
     )
