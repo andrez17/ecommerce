@@ -22,7 +22,7 @@ export const Slideshow = (props) => {
         x[slideIndex-1].style.display = "block";
     }
 
-    setTimeout(()=>showDivs(slideIndex), 750)
+    setTimeout(()=>showDivs(slideIndex), 800)
 
     return (
         <div className="slideshow">

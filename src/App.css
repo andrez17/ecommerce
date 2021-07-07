@@ -6,14 +6,18 @@
 .App {
   background-color: rgb(255, 255, 255);
   display: grid;
-  height: 100vh;
-  grid-template: 10% 40% 20% 20% 30% / repeat(5, 1fr);
+  /* height: 100vh; */
+
+
+  grid-template: 5% 100% 20%/ repeat(5, 1fr);
+  grid-gap: 50px 0px;
 }
 
 .navbar-container {
   background-color: rgb(202, 202, 202);
   text-align: center;
   grid-column: 1 / span 5;
+  grid-row: 1 / span 1;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -28,18 +32,22 @@
 }
 
 .site-container {
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 80, 80); */
   text-align: center;
-  grid-row: 2 / span 3;
+  grid-row: 2 / span 1;
   grid-column: 1 / span 5;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template: 500px 200px 500px 500px / auto;
+  /* grid-gap: 50px; */
+  /* justify-content: center;
   align-content: center;
   flex-direction: column;
+  margin-bottom: 400px; */
 }
 
 .slideshow {
   width: 100%;
+  grid-row: 1 / span 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,6 +80,7 @@
 }
 
 .productRowContainer {
+  grid-row: 2 / span 1;
   display: flex;
   width: 80%;
   justify-content: space-between;
@@ -82,28 +91,99 @@
   height: 150px;
 }
 
-.footer-container {
-  background-color: rgb(202, 202, 202);
-  text-align: center;
-  grid-row: 5 / span 1;
-  grid-column: 1 / span 5;
+.shipping-container {
+  /* background-color: rgb(146, 146, 146); */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
+  grid-row: 3 / span 1;
+  /* justify-content: space-between; */
 }
 
+.shipping-header {
+  /* background-color: aqua; */
+  color:rgb(1, 102, 43)
+}
+
+.shipping-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* background-color: red; */
+  width: 90%;
+  
+}
+
+.shipping-boxes img{
+  height: 200px;
+  width: 200px;
+}
+
+.shipping1 {
+  width: 300px;
+  height: 200px;
+  background-color: rgb(190, 190, 190);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+
+}
+
+.shipping2 {
+  width: 300px;
+  height: 200px;
+  background-color: rgb(190, 190, 190);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.shipping3 {
+  width: 300px;
+  height: 200px;
+  background-color: rgb(190, 190, 190);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.footer-container {
+  background-color: rgb(202, 202, 202);
+  text-align: center;
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 5;
+  display: grid;
+  grid-template-rows: 1fr 2fr
+}
 
 
 .footer-links {
   display: flex;
-  /* background-color: brown; */
+  background-color: rgb(73, 73, 73);
+  color: whitesmoke;
   justify-content: center;
+  align-items: center;
+  grid-row: 1 / span 1;
+  /* background-color: aqua; */
 }
 
 .footer-links li{
   display: inline;
   margin-right: 15px;
   margin-left: 15px;
+  
+}
+
+.socialmedia-contact{
+  /* background-color: brown; */
+  grid-row: 2 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .socialmedia-contact img{
