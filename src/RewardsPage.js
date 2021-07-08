@@ -13,8 +13,7 @@ export const RewardsPage = () => {
             </div>
             <div className="rewards-signup">
                 <h1>Sign-Up</h1>
-                <form className="rewards-form">
-                    
+                <form className="rewards-form">      
                     <input value="Email"/>
                     <input value="New Password"/>
                     <input value="Confirm Password"/>

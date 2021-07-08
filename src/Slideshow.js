@@ -25,9 +25,9 @@ export const Slideshow = (props) => {
     setTimeout(()=>showDivs(slideIndex), 800)
 
     return (
-        <div onClick={() => window.location.href="/products"} className="slideshow">
+        <div className="slideshow">
             <button class="w3-button w3-display-left" onClick={() => plusDivs(-1)}>&#10094;</button>
-                <div className="mySlidesContainer">
+                <div onClick={() => window.location.href="/products"} className="mySlidesContainer">
                     {props.products.map((product, index) => {
                     if (index < 5)
                     return <Image key={index} id={index} image={product.image}/>
