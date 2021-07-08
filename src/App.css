@@ -280,9 +280,31 @@
   text-align: center;
   grid-row: 2 / span 1;
   grid-column: 1 / span 5;
-  display: grid;
-  grid-template: 500px 200px 500px 700px / auto;
   grid-gap: 50px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.rewards-signup {
+  /* background-color: blue; */
+  border: 2px solid black;
+  height: 300px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rewards-form {
+  display: flex;
+  flex-direction: column;
+  /* background-color: purple; */
+  justify-content: center;
+  height: 200px;
+  width: 500px;
+  
 }
 
 .partnerpage-container {
