@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
 import { Slideshow } from './Slideshow'
 import { ProductRow } from './ProductRow'
 import { Shipping } from './Shipping'
@@ -21,13 +20,11 @@ export const Site = () => {
 
 
     return (
-        <Router>
             <div className="site-container">
                 <Slideshow products={products}/>
                 <ProductRow />
                 <Shipping />
                 <FashionReel />
             </div>
-        </Router>
     )
 }

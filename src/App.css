@@ -7,9 +7,7 @@
   background-color: rgb(255, 255, 255);
   display: grid;
   /* height: 100vh; */
-
-
-  grid-template: 5% 90% 20%/ repeat(5, 1fr);
+  grid-template: 150px 90% 200px / repeat(5, 1fr);
   grid-gap: 50px 0px;
 }
 
@@ -37,7 +35,7 @@
   grid-row: 2 / span 1;
   grid-column: 1 / span 5;
   display: grid;
-  grid-template: 500px 200px 500px 700px / auto;
+  /* grid-template: 500px 200px 500px 700px / auto; */
   grid-gap: 50px;
   /* grid-gap: 50px; */
   /* justify-content: center;
@@ -178,31 +176,37 @@
 }
 
 .fashionreel-section {
+  width: 100%;
   grid-row: 2 / span 1;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  margin: 0 auto;
   /* background-color: blueviolet; */
 }
 
 .reel-1 {
   height: 500px;
   width: 280px;
-  background: url("https://www.fashiongonerogue.com/wp-content/uploads/2014/04/iggy-azalea-revolve-clothing-photos-2014-1.jpg") fixed center no-repeat;
-  background-size: contain;
+  background: url("https://www.fashiongonerogue.com/wp-content/uploads/2014/04/iggy-azalea-revolve-clothing-photos-2014-1.jpg") center no-repeat;
+  background-size: cover;
+  margin: 10px;
 }
 
 .reel-2 {
   height: 500px;
   width: 280px;
-  background: url("https://sc01.alicdn.com/kf/HT1HmUNFAliXXagOFbX6/220128135/HT1HmUNFAliXXagOFbX6.jpg") fixed center no-repeat;
-  
+  background: url("https://sc01.alicdn.com/kf/HT1HmUNFAliXXagOFbX6/220128135/HT1HmUNFAliXXagOFbX6.jpg") no-repeat;
+  background-size: cover;
+  margin: 10px;
 }
 
 .reel-3 {
   height: 500px;
   width: 280px;
-  background: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gh-closet-organization-1583437747.png") fixed center no-repeat;
+  background: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gh-closet-organization-1583437747.png") center no-repeat;
+  background-size: cover;
+  margin: 10px;
 }
 
 
@@ -236,4 +240,40 @@
   border-radius: 50px;
   margin-right: 10px;
   margin-left: 10px;
+}
+
+.productpage-container{
+  text-align: center;
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 5;
+  display: grid;
+  /* grid-template: 500px 200px 500px 700px / auto; */
+  grid-gap: 50px;
+}
+
+.customerpage-container{
+  text-align: center;
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 5;
+  display: grid;
+  grid-template: 500px 200px 500px 700px / auto;
+  grid-gap: 50px;
+}
+
+.partnerpage-container {
+  text-align: center;
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 5;
+  display: grid;
+  grid-template: 500px 200px 500px 700px / auto;
+  grid-gap: 50px;
+}
+
+.resourcepage-container {
+  text-align: center;
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 5;
+  display: grid;
+  grid-template: 500px 200px 500px 700px / auto;
+  grid-gap: 50px;
 }

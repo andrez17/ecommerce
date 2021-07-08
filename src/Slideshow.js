@@ -25,7 +25,7 @@ export const Slideshow = (props) => {
     setTimeout(()=>showDivs(slideIndex), 800)
 
     return (
-        <div className="slideshow">
+        <div onClick={() => window.location.href="/products"} className="slideshow">
             <button class="w3-button w3-display-left" onClick={() => plusDivs(-1)}>&#10094;</button>
                 <div className="mySlidesContainer">
                     {props.products.map((product, index) => {

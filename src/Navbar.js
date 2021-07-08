@@ -4,13 +4,12 @@ import React from 'react'
 export const Navbar = () => {
     return (
         <div className="navbar-container">
-            <h1>Ecommerce</h1>
+            <h1><a href="/">Ecommerce</a></h1>
             <ul className="navbar-links">
-                <li><a href="#">Solutions</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Customers</a></li>
-                <li><a href="#">Partners</a></li>
-                <li><a href="#">Resources</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/customers">Customers</a></li>
+                <li><a href="/partners">Partners</a></li>
+                <li><a href="/resources">Resources</a></li>
             </ul>
         </div>
     )
