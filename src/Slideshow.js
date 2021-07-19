@@ -1,6 +1,10 @@
+import { useSelector } from "react-redux";
 import {Image} from "./Image"
 
 export const Slideshow = (props) => {
+
+    const products = useSelector((state) => state.allProducts.products);
+    // const { id, title } = products[0];
 
     var slideIndex = 1;
 
@@ -22,13 +26,13 @@ export const Slideshow = (props) => {
         x[slideIndex-1].style.display = "block";
     }
 
-    setTimeout(()=>showDivs(slideIndex), 800)
+    setTimeout(()=>showDivs(slideIndex), 2000)
 
     return (
         <div className="slideshow">
             <button class="w3-button w3-display-left" onClick={() => plusDivs(-1)}>&#10094;</button>
                 <div onClick={() => window.location.href="/products"} className="mySlidesContainer">
-                    {props.products.map((product, index) => {
+                    {products.map((product, index) => {
                     if (index < 5)
                     return <Image key={index} id={index} image={product.image}/>
                     })

@@ -1,30 +1,55 @@
 import React, { useState, useEffect } from 'react'
-import { Slideshow } from './Slideshow'
-import { ProductRow } from './ProductRow'
-import { Shipping } from './Shipping'
-import { FashionReel } from './FashionReel'
+import { BrowserRouter as Router, Route} from 'react-router-dom'
+import { Home } from './Home'
+import { Navbar } from './Navbar'
+import { Footer } from './Footer'
+import { ProductsPage } from './ProductsPage'
+import { RewardsPage } from './RewardsPage'
+import { PartnersPage } from './PartnersPage'
+import { ResourcesPage } from './ResourcesPage'
+import { useDispatch } from 'react-redux'
+import { setProducts } from './redux/actions/productActions';
 
 
 export const Site = () => {
-    const [products, setProducts] = useState([]);
+    // const [products, setProducts] = useState([]);
+    const [category, setCategory] = useState('');
+
+    // const products = useSelector((state) => state);
+    const dispatch = useDispatch();
+
 
     useEffect(() => {
         const fetchData = async() => {
             const response = await fetch('https://fakestoreapi.com/products/');
             const data = await response.json();
-            setProducts(data);
+            dispatch(setProducts(data));
         }
         fetchData();
     }, [])
-
-
+    
 
     return (
-            <div className="site-container">
-                <Slideshow products={products}/>
-                <ProductRow />
-                <Shipping />
-                <FashionReel />
-            </div>
+            <Router>
+            {/* <Switch> */}
+            <Navbar />
+            <Route exact path="/">
+                <Home category={category} setCategory={setCategory}/>
+            </Route>
+            <Route path="/products">
+                <ProductsPage category={category}/>
+            </Route>
+            <Route path="/rewards">
+                <RewardsPage />
+            </Route>
+            <Route path="/partners">
+                <PartnersPage />
+            </Route>
+            <Route path="/resources">
+                <ResourcesPage />
+            </Route>
+            {/* </Switch> */}
+            <Footer />      
+        </Router>
     )
 }
