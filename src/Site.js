@@ -6,7 +6,7 @@ import { Footer } from './Footer'
 import { ProductsPage } from './ProductsPage'
 import { RewardsPage } from './RewardsPage'
 import { PartnersPage } from './PartnersPage'
-import { ResourcesPage } from './ResourcesPage'
+import { StoresPage } from './StoresPage'
 import { useDispatch } from 'react-redux'
 import { setProducts } from './redux/actions/productActions';
 import { ShirtsPage } from './ShirtsPage'
@@ -62,8 +62,8 @@ export const Site = () => {
                         <Route path="/partners">
                             <PartnersPage />
                         </Route>
-                        <Route path="/resources">
-                            <ResourcesPage />
+                        <Route path="/stores">
+                            <StoresPage />
                         </Route>
                     </Switch>
                     {/* </main> */}

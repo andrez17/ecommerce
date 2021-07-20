@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
-import {Image} from "./Image"
+import { Image } from "./Image"
+import { Link } from "react-router-dom";
 
 export const Slideshow = (props) => {
 
@@ -31,7 +32,7 @@ export const Slideshow = (props) => {
     return (
         <div className="slideshow">
             <button class="w3-button w3-display-left" onClick={() => plusDivs(-1)}>&#10094;</button>
-                <div onClick={() => window.location.href="/products"} className="mySlidesContainer">
+                <Link to="/products" className="mySlidesContainer">
                     {products.map((product, index) => {
                     if (index < 5)
                     return <Image key={index} id={index} image={product.image}/>
@@ -40,8 +41,7 @@ export const Slideshow = (props) => {
                     <div className="mySlidesBanner">
                         <h1>Everything you need. In one place.</h1>
                     </div>
-                </div>
-                
+                </Link>            
             <button class="w3-button w3-display-right" onClick={() => plusDivs(1)}>&#10095;</button>
         </div>
     )
