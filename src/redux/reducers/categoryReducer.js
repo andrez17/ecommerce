@@ -14,3 +14,16 @@ export const categoryReducer = (state = initialState, action) => {
             return state;
     }
 }
+
+// export const saveCategory = async(dispatch, getState) => {
+//     const category = getState().category;
+//     await fetch('http://localhost:4000/category', {
+//         method: "POST",
+//         headers: {
+//             'Accept': 'application/json',
+//             'Content-type': 'application/json'
+//         },
+//         body: JSON.stringify(category)
+//     })
+//     alert('success')
+// }
