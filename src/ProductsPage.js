@@ -5,9 +5,9 @@ import { useSelector } from 'react-redux';
 export const ProductsPage = (props) => {
     // const [products, setProducts] = useState([]);
     const products = useSelector((state) => state.allProducts.products);
-    const category = useSelector((state) => state.category.category);
+    // const category = useSelector((state) => state.category.category);
 
-    console.log(category)
+    // console.log(category)
 
 
     return (

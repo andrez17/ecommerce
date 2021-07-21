@@ -3,8 +3,8 @@ import { MapContainer } from './MapContainer'
 
 export const StoresPage = () => {
     return (
-        <div className="storespage-container">
+        // <div className="storespage-container">
             <MapContainer />
-        </div>
+        // </div>
     )
 }

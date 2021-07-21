@@ -16,7 +16,7 @@ import { ElectronicsPage } from './MiscPage'
 
 export const Site = () => {
     // const [products, setProducts] = useState([]);
-    const [category, setCategory] = useState('');
+    // const [category, setCategory] = useState('');
 
     // const products = useSelector((state) => state);
     const dispatch = useDispatch();
@@ -53,7 +53,7 @@ export const Site = () => {
                             <ElectronicsPage />
                         </Route>
                         <Route path="/products">
-                            <ProductsPage category={category}/>
+                            <ProductsPage />
                         </Route>
 
                         <Route path="/rewards">

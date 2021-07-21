@@ -1,14 +1,14 @@
 import { ActionTypes } from "../contants/action-types";
 
 const initialState = {
-    category: ''
+    marker: []
 };
-export const categoryReducer = (state = initialState, action) => {
+export const markerReducer = (state = initialState, action) => {
     switch(action.type){
-        case ActionTypes.SET_CATEGORY:
+        case ActionTypes.SET_MARKER:
             return {
                 ...state,
-                category: action.payload
+                marker: action.payload
             }
         default:
             return state;
