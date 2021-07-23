@@ -1,14 +1,15 @@
 import { ActionTypes } from "../contants/action-types";
 
 const initialState = {
-    marker: []
+    login: []
 };
-export const markerReducer = (state = initialState, action) => {
+export const loginReducer = (state = initialState, action) => {
+    console.log('action', action)
     switch(action.type){
-        case ActionTypes.SET_MARKER:
+        case ActionTypes.SET_LOGIN:
             return {
                 ...state,
-                marker: action.payload
+                login: action.payload
             }
         default:
             return state;

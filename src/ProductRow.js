@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { setCategory } from './redux/actions/categoryAction';
+// import { setCategory } from './redux/actions/categoryAction';
 import { NavLink } from 'react-router-dom'
 
 export const ProductRow = (props) => {

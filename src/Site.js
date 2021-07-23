@@ -13,6 +13,7 @@ import { ShirtsPage } from './ShirtsPage'
 import { JeweleryPage } from './JeweleryPage'
 import { JacketsPage } from './JacketsPage'
 import { ElectronicsPage } from './MiscPage'
+import { Profile } from './Profile'
 
 export const Site = () => {
     // const [products, setProducts] = useState([]);
@@ -52,10 +53,12 @@ export const Site = () => {
                         <Route path="/products/electronics">
                             <ElectronicsPage />
                         </Route>
+                        <Route path="/rewards/profile">
+                            <Profile authorized={true}/>
+                        </Route>
                         <Route path="/products">
                             <ProductsPage />
                         </Route>
-
                         <Route path="/rewards">
                             <RewardsPage />
                         </Route>
