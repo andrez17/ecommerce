@@ -4,7 +4,7 @@ const initialState = {
     login: []
 };
 export const loginReducer = (state = initialState, action) => {
-    console.log('action', action)
+    // console.log('action', action)
     switch(action.type){
         case ActionTypes.SET_LOGIN:
             return {

@@ -40,29 +40,32 @@ export const RewardsPage = () => {
         // console.log(email, password)
     }
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const username = (e.target[0].value).toString();
-        const newpassword = (e.target[1].value).toString();
-        const confirmpassword = (e.target[2].value).toString();
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     const username = (e.target[0].value).toString();
+    //     const newpassword = (e.target[1].value).toString();
+    //     const confirmpassword = (e.target[2].value).toString();
 
-        if(newpassword != confirmpassword){
-            alert("Passwords do not match.")
-        }
+    //     if(newpassword != confirmpassword){
+    //         alert("Passwords do not match.")
+    //     }
 
-        const response = await fetch('https://fakestoreapi.com/users', {
-                method: 'POST',
-                body: JSON.stringify({
-                    username: username,
-                    password: newpassword
-                }),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            });
-        const data = await response.json();
-        console.log("Response: ", data)
-    }
+    //     const response = await fetch('https://fakestoreapi.com/users', {
+    //             method: 'POST',
+    //             body: JSON.stringify({
+    //                 username: username,
+    //                 password: newpassword
+    //             }),
+    //             headers: {
+    //                 'Content-Type': 'application/json'
+    //             }
+    //         })
+    //         .catch(rejected => {
+    //             console.log(rejected);
+    //         });
+    //     const data = await response.json();
+    //     console.log("Response: ", data)
+    // }
 
     return (
         <div className="rewardpage-container">
@@ -74,7 +77,7 @@ export const RewardsPage = () => {
                     <button>SIGN IN</button>
                 </form>
             </div>
-            <div className="rewards-signup">
+            {/* <div className="rewards-signup">
                 <form className="rewards-form" method="GET" onSubmit={handleSubmit}>                    
                     <label>Sign-Up</label>           
                     <input name="username" type="text" placeholder="Username"/>
@@ -82,7 +85,7 @@ export const RewardsPage = () => {
                     <input name="confirmpassword" type="password" placeholder="Confirm Password"/>
                     <button>SUBMIT</button>
                 </form>
-            </div>
+            </div> */}
         </div>
     )
 }
