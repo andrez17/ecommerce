@@ -9,40 +9,34 @@ export const Slideshow = (props) => {
 
     var slideIndex = 1;
 
-    const plusDivs = (n) => {
-        showDivs(slideIndex += n);
-    }
-
-    const showDivs = (n) => {
+    function showSlides() {
         var i;
-        let x = document.getElementsByClassName('mySlides');
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length} ;
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
         }
-        // if(x[slideIndex-1] === undefined){
-        //     console.log('No')
-        // }
-        x[slideIndex-1].style.display = "block";
-    }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
 
-    setTimeout(()=>showDivs(slideIndex), 2000)
+    setTimeout(()=>showSlides(), 2000);
 
     return (
         <div className="slideshow">
-            <button class="w3-button w3-display-left" onClick={() => plusDivs(-1)}>&#10094;</button>
-                <Link to="/products" className="mySlidesContainer">
+            <div class="mySlidesContainer">
+                <Link to="/products">
                     {products.map((product, index) => {
                     if (index < 5)
                     return <Image key={index} id={index} image={product.image}/>
                     })
                     }
-                    <div className="mySlidesBanner">
-                        <h1>Everything you need. In one place.</h1>
-                    </div>
-                </Link>            
-            <button class="w3-button w3-display-right" onClick={() => plusDivs(1)}>&#10095;</button>
+                </Link> 
+                <div className="mySlidesBanner">
+                    <h1>Everything you need. In one place.</h1>
+                </div>
+            </div>           
         </div>
     )
 }

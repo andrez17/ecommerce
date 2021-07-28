@@ -23,9 +23,9 @@ export const Home = (props) => {
     return (
         <div className="site-container">
             <Slideshow />
-            <ProductRow category={props.category} setCategory={props.setCategory}/>
-            <Shipping />
-            <FashionReel />
+            <ProductRow />
+            {/* <Shipping />
+            <FashionReel /> */}
         </div>
     )
 }
