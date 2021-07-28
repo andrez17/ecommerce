@@ -25,7 +25,7 @@ export const Home = (props) => {
             <Slideshow />
             <ProductRow />
             <Shipping />
-            {/* <FashionReel /> */}
+            <FashionReel />
         </div>
     )
 }
