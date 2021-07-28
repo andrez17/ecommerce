@@ -24,8 +24,8 @@ export const Home = (props) => {
         <div className="site-container">
             <Slideshow />
             <ProductRow />
-            {/* <Shipping />
-            <FashionReel /> */}
+            <Shipping />
+            {/* <FashionReel /> */}
         </div>
     )
 }
