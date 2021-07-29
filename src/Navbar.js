@@ -11,21 +11,21 @@ export const Navbar = () => {
                     <NavLink className="inactive-nav" activeClassName="active-nav" to="/products">
                         <div className="nav-li-container">
                             <img className="search" src="https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/search-512.png"/>
-                            Products
+                            <a>Products</a>
                         </div>
                     </NavLink></li>
                 <li>
                     <NavLink className="inactive-nav" activeClassName="active-nav" to="/rewards">
                         <div className="nav-li-container">
                             <img className="user" src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"/>
-                            Sign-In
+                            <a>Sign-In</a>
                         </div>
                     </NavLink></li>
                 <li>
                     <NavLink className="inactive-nav" activeClassName="active-nav" to="/partners">
                         <div className="nav-li-container">
                             <img className="partners" src="https://static.thenounproject.com/png/2171-200.png"/>
-                            Partners
+                            <a>Partners</a>
                         </div>
                     </NavLink>
                 </li>
@@ -33,7 +33,7 @@ export const Navbar = () => {
                     <NavLink className="inactive-nav" activeClassName="active-nav" to="/stores">
                         <div className="nav-li-container">
                             <img alt="" className="stores" src="https://cdn.iconscout.com/icon/free/png-256/shop-2853363-2376777.png"/>
-                            Stores
+                            <a>Stores</a>
                         </div>
                     </NavLink>
                 </li>
