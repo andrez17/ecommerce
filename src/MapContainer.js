@@ -67,7 +67,8 @@ export const MapContainer = () => {
                     <GoogleMap 
                         mapContainerStyle={mapStyles}
                         zoom={13}
-                        center={defaultCenter}>
+                        center={defaultCenter}
+                        >
                             {
                                 locations.map((item, index) => {
                                     return (

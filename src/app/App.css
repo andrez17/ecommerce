@@ -669,4 +669,81 @@
     width: auto;
     margin: 10px;
   }
+
+  .store-container {
+    /* text-align: center; */
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 5;
+    display: grid;
+    grid-template-rows: 0.8fr;
+    /* background-color:blue; */
+    height: 100%;
+    margin: 0 auto;
+  }
+  
+  .map-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1 / span 1;
+  }
+  
+  .storeinfo-container {
+    /* background-color: red; */
+    grid-row: 1 / span 1;
+  }
+
+  .store-details {
+    font-size: 13px;
+  }
+
+  .map-point {
+    display: none;
+  }
+  
+  .storeinfo-container table {
+    width: 100%;
+    
+  }
+  .storeinfo-container table td{
+    width: 100%;
+    border-bottom: 1px solid grey;
+  }
+  
+  .storeinfo-container table th{
+    background-color: lightgrey;
+    text-align: left;
+    width: 100%;
+    height: 50px;
+    padding-left: 15px;
+  }
+  
+  .storeinfo-container table tr td{
+    /* background-color: green; */
+    text-align: left;
+    width: 100%;
+    height: 150px;
+  }
+  
+  .store-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: aliceblue; */
+  }
+  
+  .store-details .address {
+    margin-bottom: auto;
+  }
+  
+  .store-details .hours-of-operation {
+    margin-bottom: auto;
+  
+  }
+  
+  .store-details .store-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
