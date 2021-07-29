@@ -646,4 +646,27 @@
     width: 500px;
     
   }
+
+  .partnerpage-container {
+    /* background-color: red; */
+    text-align: center;
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 4;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .partnerpage-container img{
+    min-width: 350px;
+  }
+  
+  .mission-statement{
+    background-color: rgb(214, 214, 214);
+    color: rgb(73, 121, 175);
+    width: auto;
+    margin: 10px;
+  }
 }
