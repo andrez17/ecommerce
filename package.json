@@ -2,7 +2,7 @@
   "name": "ecommerce-app",
   "version": "0.1.0",
   "private": true,
-  "homepage":  "https://andrez17.github.io/ecommerce",
+  "homepage": "https://andrez17.github.io/ecommerce",
   "dependencies": {
     "@react-google-maps/api": "^2.2.0",
     "@testing-library/jest-dom": "^5.14.1",
@@ -23,6 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "browserslist": {
@@ -36,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
