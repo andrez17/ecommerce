@@ -38,7 +38,7 @@ export const Site = () => {
                 <Navbar />
                 {/* <main> */}
                     <Switch>
-                        <Route exact path="/">
+                        <Route exact path="/ecommerce">
                             <Home />
                         </Route>
                         <Route path="/products/shirts">
