@@ -22,7 +22,10 @@ export const Home = (props) => {
 
     return (
         <div className="site-container">
-            <Slideshow />
+            <div class="showcaseImg" >
+                <h1>ALLTHE merch</h1>
+            </div>
+            <Slideshow />  
             <ProductRow />
             <Shipping />
             <FashionReel />

@@ -42,9 +42,9 @@ export const Slideshow = (props) => {
                     })
                     }
                 </Link> 
-                <div className="mySlidesBanner">
+                {/* <div className="mySlidesBanner">
                     <h1>ALLTHE merch</h1>
-                </div>
+                </div> */}
             </div>           
         </div>
     )
